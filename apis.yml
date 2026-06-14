@@ -1,0 +1,137 @@
+name: CoinEx
+description: CoinEx is a global cryptocurrency exchange offering REST and WebSocket APIs for spot trading, futures, perpetual contracts, market data, order management, asset operations, and sub-account administration. API v2 launched January 2024 with unified authentication, restructured endpoints, and per-second rate limiting.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/apis.yml
+version: "0.19"
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+
+tags:
+  - Cryptocurrency
+  - Exchange
+  - Spot Trading
+  - Futures
+  - Perpetual Contracts
+  - Market Data
+  - WebSocket
+  - Finance
+
+apis:
+  - name: CoinEx REST API v2
+    description: The primary HTTP REST API for CoinEx, providing access to spot trading, futures, perpetual contracts, account management, asset operations, market data, and referral endpoints. Authentication uses HMAC-SHA256 signed headers.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.coinex.com/api/v2/
+    baseURL: https://api.coinex.com/v2
+    tags:
+      - REST
+      - Spot Trading
+      - Futures
+      - Market Data
+      - Account Management
+      - Asset Management
+      - Referral
+    properties:
+      - type: Documentation
+        url: https://docs.coinex.com/api/v2/
+      - type: Authentication
+        url: https://docs.coinex.com/api/v2/authorization
+      - type: RateLimits
+        url: https://docs.coinex.com/api/v2/rate-limit
+      - type: Changelog
+        url: https://docs.coinex.com/api/v2/changelog
+      - type: IntegrationGuide
+        url: https://docs.coinex.com/api/v2/guide
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/rate-limits/rate-limits.yml
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/plans/plans.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: CoinEx Support
+        url: https://support.coinex.com/
+
+  - name: CoinEx WebSocket API v2 - Spot
+    description: Real-time WebSocket API for CoinEx spot markets. Supports streaming subscriptions for market depth, trade feeds, K-line data, and account/order updates. Responses use zip compression.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.coinex.com/api/v2/
+    baseURL: wss://socket.coinex.com/v2/spot
+    tags:
+      - WebSocket
+      - Spot Trading
+      - Market Data
+      - Real-Time
+      - Order Updates
+    properties:
+      - type: Documentation
+        url: https://docs.coinex.com/api/v2/
+      - type: Authentication
+        url: https://docs.coinex.com/api/v2/authorization
+      - type: RateLimits
+        url: https://docs.coinex.com/api/v2/rate-limit
+    contact:
+      - FN: CoinEx Support
+        url: https://support.coinex.com/
+
+  - name: CoinEx WebSocket API v2 - Futures
+    description: Real-time WebSocket API for CoinEx futures and perpetual contract markets. Supports streaming subscriptions for market depth, funding rates, position updates, and order events. Responses use zip compression.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.coinex.com/api/v2/
+    baseURL: wss://socket.coinex.com/v2/futures
+    tags:
+      - WebSocket
+      - Futures
+      - Perpetual Contracts
+      - Market Data
+      - Real-Time
+      - Funding Rate
+    properties:
+      - type: Documentation
+        url: https://docs.coinex.com/api/v2/
+      - type: Authentication
+        url: https://docs.coinex.com/api/v2/authorization
+      - type: RateLimits
+        url: https://docs.coinex.com/api/v2/rate-limit
+    contact:
+      - FN: CoinEx Support
+        url: https://support.coinex.com/
+
+common:
+  - type: Developer Console
+    url: https://www.coinex.com/en/apikey
+  - type: Documentation
+    url: https://docs.coinex.com/api/v2/
+  - type: Authentication
+    url: https://docs.coinex.com/api/v2/authorization
+  - type: RateLimits
+    url: https://docs.coinex.com/api/v2/rate-limit
+  - type: Changelog
+    url: https://docs.coinex.com/api/v2/changelog
+  - type: Fees
+    url: https://www.coinex.com/en/fees
+  - type: TermsOfService
+    url: https://www.coinex.com/en/service
+  - type: HelpCenter
+    url: https://support.coinex.com/
+  - type: GitHub
+    url: https://github.com/coinexcom
+  - type: GitHubDemoRepo
+    url: https://github.com/coinexcom/coinex_api_demo
+  - type: GitHubMCPServer
+    url: https://github.com/coinexcom/coinex_mcp_server
+  - type: PythonSDK
+    url: https://github.com/ccxt/coinex-python
+  - type: DotNetSDK
+    url: https://www.nuget.org/packages/CoinEx.Net
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/finops/finops.yml
+
+maintainers:
+  - FN: API Evangelist
+    url: https://apievangelist.com
+    email: kin@apievangelist.com

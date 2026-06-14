@@ -1,0 +1,51 @@
+name: CoinEx API FinOps
+description: Financial operations considerations for integrating with the CoinEx API — trading fees, cost optimization via CET token, VIP tier management, and budget planning for high-frequency trading workloads.
+url: https://www.coinex.com/en/fees
+
+api_access_cost:
+  description: API access itself is free for all registered CoinEx users. Costs are incurred through trading fees per executed order.
+  monthly_cost: $0 (API access)
+  trading_fees: Variable — based on VIP tier and CET usage
+
+cost_drivers:
+  - name: Spot Trading Fees
+    description: Maker and taker fees per trade. Default 0.20% for both; reduced by VIP tier.
+    base_maker: "0.20%"
+    base_taker: "0.20%"
+    top_vip_maker: "0.012%"
+    top_vip_taker: "0.024%"
+  - name: Futures / Perpetual Trading Fees
+    description: Lower base fees than spot. Maker 0.03%, taker 0.05% at base tier.
+    base_maker: "0.03%"
+    base_taker: "0.05%"
+  - name: Withdrawal Fees
+    description: Network-dependent fees for on-chain withdrawals. Varies by cryptocurrency and network congestion.
+  - name: Deposit Fees
+    description: No deposit fees charged by CoinEx.
+
+cost_optimization:
+  - strategy: CET Token Fee Payment
+    description: Activate "Use CET as Fees" to pay trading fees in CET token at a discount of up to 25%.
+    savings: Up to 25%
+    url: https://www.coinex.com/en/fees
+  - strategy: VIP Tier Advancement
+    description: Increase CET balance, total assets, or trading volume to qualify for higher VIP tiers with lower fee rates.
+    criteria:
+      - CET token balance (including off-exchange)
+      - Total asset value on CoinEx
+      - 30-day spot trading volume
+      - 30-day futures trading volume
+  - strategy: Market Making
+    description: Apply for Market Maker status to receive separate (potentially lower) fee schedules. Market maker level updates monthly on the 1st at 01:00 UTC.
+  - strategy: Maker vs Taker Order Strategy
+    description: Prefer limit orders (maker) over market orders (taker) to benefit from lower maker fee rates, especially significant at lower VIP tiers.
+
+rate_limit_cost_implications:
+  description: Hitting long-cycle rate limits triggers "low-speed mode," which can severely throttle trading throughput for up to 24 hours. Design API clients with rate limiting awareness to avoid unintended trading slowdowns.
+  periods_at_risk: [1H, 4H, 8H, 24H]
+  mitigation: Implement client-side request queuing and respect X-RateLimit-Remaining headers
+
+vip_tier_schedule:
+  update_frequency: Daily at 01:00 UTC
+  snapshot_time: 00:00 UTC using day's USD exchange rates
+  market_maker_update: Monthly on 1st at 01:00 UTC

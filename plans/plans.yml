@@ -1,0 +1,46 @@
+name: CoinEx API Plans
+description: CoinEx API access is free for all registered users. Trading fee rates vary by VIP tier, determined by CET token balance, total asset value, or 30-day trading volume.
+url: https://www.coinex.com/en/fees
+plans:
+  - name: Standard
+    description: Default tier for all registered users. API access is included at no additional cost.
+    rate: Free
+    authentication: API Key (HMAC-SHA256)
+    spot_maker_fee: "0.20%"
+    spot_taker_fee: "0.20%"
+    futures_maker_fee: "0.03%"
+    futures_taker_fee: "0.05%"
+    features:
+      - REST API access
+      - WebSocket access
+      - Market data (public, no auth required)
+      - Spot trading
+      - Futures trading
+      - Asset management
+      - Sub-account support
+
+  - name: VIP (Tiered)
+    description: Higher VIP levels unlock lower maker/taker fees. Tier is determined daily at 01:00 UTC based on CET balance, total asset value, 30-day spot volume, or 30-day futures volume — whichever qualifies.
+    rate: Volume/Holdings Based
+    authentication: API Key (HMAC-SHA256)
+    spot_maker_fee_top: "0.012%"
+    spot_taker_fee_top: "0.024%"
+    cet_discount: "Up to 25% fee reduction when using CET token for fees"
+    eligibility_criteria:
+      - CET token balance (including off-exchange holdings)
+      - Total asset value on CoinEx
+      - 30-day spot trading volume
+      - 30-day futures trading volume
+    vip_update_schedule: Daily at 01:00 UTC
+    market_maker_update_schedule: Monthly on 1st at 01:00 UTC
+    features:
+      - All Standard features
+      - Reduced maker/taker fees
+      - Dedicated account management (top tiers)
+      - Priority customer support (top tiers)
+      - Institutional-grade trading tools (top tiers)
+
+notes:
+  - API trading volume counts toward VIP level calculation (market makers excepted)
+  - The more favorable rate between VIP Discount and Market Maker Discount is applied
+  - CET token can be activated as fee payment method across all trading pairs

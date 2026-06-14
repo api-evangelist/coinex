@@ -1,0 +1,70 @@
+name: CoinEx API Rate Limits
+description: CoinEx API v2 enforces three tiers of rate limiting - IP-level, short-cycle per-account, and long-cycle shared quotas. A token bucket mechanism governs short-cycle limits.
+url: https://docs.coinex.com/api/v2/rate-limit
+
+ip_rate_limit:
+  description: Global limit applied per IP address across all users
+  limit: 400 requests per second
+  scope: All endpoints
+
+short_cycle_limits:
+  description: Per-account limits with independent quotas for main and sub-accounts. Uses token bucket mechanism — quota recovers at the stated rate per second. Error code 4213 returned when quota exhausted.
+  mechanism: Token Bucket
+  response_headers:
+    - header: X-RateLimit-Limit
+      description: Maximum requests allowed per second for the group
+    - header: X-RateLimit-Remaining
+      description: Remaining request quota for the current window
+    - header: X-RateLimit-LongPeriod-{period}-Remaining
+      description: Remaining long-cycle quota (period = 1H, 4H, 8H, 24H)
+
+  spot:
+    - group: Place & Edit Orders
+      endpoints: [Place order, Place stop order, Edit order, Edit stop order]
+      limit: 30 requests/second
+    - group: Cancel Orders
+      endpoints: [Cancel single order]
+      limit: 60 requests/second
+    - group: Batch Cancel
+      endpoints: [Batch cancel, Cancel by client ID]
+      limit: 40 requests/second
+    - group: Query Orders
+      endpoints: [Get pending orders, Get order status]
+      limit: 50 requests/second
+    - group: Order History
+      endpoints: [Get execution history, Get filled orders]
+      limit: 10 requests/second
+    - group: Account Modifications
+      endpoints: [Settings, Transfers, Sub-account management]
+      limit: 10 requests/second
+    - group: Account Queries
+      endpoints: [Balance, Fee rate]
+      limit: 10 requests/second
+
+  futures:
+    - group: Place & Edit Orders
+      endpoints: [Place order, Place stop order, Edit order, Set leverage, Adjust margin]
+      limit: 20 requests/second
+    - group: Cancel Orders
+      endpoints: [Cancel single order]
+      limit: 40 requests/second
+    - group: Batch Cancel
+      endpoints: [Batch cancel orders]
+      limit: 20 requests/second
+    - group: Query Orders
+      endpoints: [Get pending orders, Get order status]
+      limit: 50 requests/second
+    - group: Order History
+      endpoints: [Get completed orders, Get trade history]
+      limit: 10 requests/second
+    - group: Account Queries
+      endpoints: [Balance, Position data]
+      limit: 10 requests/second
+
+long_cycle_limits:
+  description: Shared quota across main account and all sub-accounts over longer time windows
+  periods: [1H, 4H, 8H, 24H]
+  behavior: When triggered, API requests enter low-speed mode with significantly reduced group rates. Order cancellation is NOT restricted during low-speed mode.
+
+batch_requests:
+  description: Batch endpoints consume quota equal to the number of sub-requests, not counted as a single request
