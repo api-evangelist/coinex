@@ -1,0 +1,92 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CoinEx",
+  "url": "https://www.coinex.com/",
+  "description": "CoinEx is a global cryptocurrency exchange offering REST and WebSocket APIs for spot trading, futures, perpetual contracts, market data, order management, asset operations, and sub-account administration.",
+  "sameAs": [
+    "https://github.com/coinexcom"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://support.coinex.com/",
+    "contactType": "customer support"
+  },
+  "offers": [
+    {
+      "@type": "WebAPI",
+      "name": "CoinEx REST API v2",
+      "description": "The primary HTTP REST API for CoinEx, providing access to spot trading, futures, perpetual contracts, account management, asset operations, market data, and referral endpoints. Authentication uses HMAC-SHA256 signed headers.",
+      "documentation": "https://docs.coinex.com/api/v2/",
+      "termsOfService": "https://www.coinex.com/en/service",
+      "version": "v2",
+      "url": "https://api.coinex.com/v2",
+      "provider": {
+        "@type": "Organization",
+        "name": "CoinEx"
+      },
+      "category": [
+        "Cryptocurrency",
+        "Exchange",
+        "Spot Trading",
+        "Futures",
+        "Market Data"
+      ]
+    },
+    {
+      "@type": "WebAPI",
+      "name": "CoinEx WebSocket API v2 - Spot",
+      "description": "Real-time WebSocket API for CoinEx spot markets. Supports streaming subscriptions for market depth, trade feeds, K-line data, and account/order updates. Responses use zip compression.",
+      "documentation": "https://docs.coinex.com/api/v2/",
+      "version": "v2",
+      "url": "wss://socket.coinex.com/v2/spot",
+      "provider": {
+        "@type": "Organization",
+        "name": "CoinEx"
+      },
+      "category": [
+        "WebSocket",
+        "Spot Trading",
+        "Market Data",
+        "Real-Time"
+      ]
+    },
+    {
+      "@type": "WebAPI",
+      "name": "CoinEx WebSocket API v2 - Futures",
+      "description": "Real-time WebSocket API for CoinEx futures and perpetual contract markets. Supports streaming subscriptions for market depth, funding rates, position updates, and order events. Responses use zip compression.",
+      "documentation": "https://docs.coinex.com/api/v2/",
+      "version": "v2",
+      "url": "wss://socket.coinex.com/v2/futures",
+      "provider": {
+        "@type": "Organization",
+        "name": "CoinEx"
+      },
+      "category": [
+        "WebSocket",
+        "Futures",
+        "Perpetual Contracts",
+        "Market Data",
+        "Real-Time"
+      ]
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "CoinEx API Catalog",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "CoinEx API Demo",
+        "url": "https://github.com/coinexcom/coinex_api_demo",
+        "applicationCategory": "DeveloperApplication"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "CoinEx MCP Server",
+        "url": "https://github.com/coinexcom/coinex_mcp_server",
+        "applicationCategory": "DeveloperApplication"
+      }
+    ]
+  }
+}

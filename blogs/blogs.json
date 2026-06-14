@@ -1,0 +1,67 @@
+{
+  "provider": "coinex",
+  "url": "https://www.coinex.com/en/blog",
+  "fetched": "2026-06-13",
+  "posts": [
+    {
+      "title": "Game Starts! 2026 World Cup Frenzy: ALL IN THE GLORY",
+      "url": "https://www.coinex.com/blog/14804-game-starts-2026-world-cup-frenzy-all-in-the-glory",
+      "date": "2026-06-12",
+      "description": "CoinEx launches a themed promotion bridging football's unpredictability with cryptocurrency market excitement, emphasizing fast pace, high stakes, relentless pursuit of victory."
+    },
+    {
+      "title": "CoinEx Updates Proof of Reserve, Reinforcing 100% Reserve Bottom Line",
+      "url": "https://www.coinex.com/blog/14803-coinex-updates-proof-of-reserve-reinforcing-100-reserve-bottom-line",
+      "date": "2026-06-12",
+      "description": "Monthly Proof of Reserve update demonstrating the platform's commitment to asset security and transparency through regular reserve verification."
+    },
+    {
+      "title": "Stop Leaving Money on the Table: The 1,000 USDT Savings Challenge",
+      "url": "https://www.coinex.com/blog/14784-stop-leaving-money-on-the-table-the-1000-usdt-savings-challenge",
+      "date": "2026-06-09",
+      "description": "Analysis of idle capital management, examining how to optimize returns on stablecoins rather than keeping funds inactive in standard wallets."
+    },
+    {
+      "title": "Navigating a Crypto Bear Market: Staying Patient, Staying Active",
+      "url": "https://www.coinex.com/blog/14783-navigating-a-crypto-bear-market-staying-patient-staying-active",
+      "date": "2026-06-04",
+      "description": "Investment psychology perspective on enduring market downturns and maintaining portfolio strategy during prolonged crypto market contractions."
+    },
+    {
+      "title": "The Infrastructure Behind the Exchange: ViaBTC Group's Decade-Long Journey",
+      "url": "https://www.coinex.com/blog/14765-the-infrastructure-behind-the-exchange-viabtc-groups-decadelong-journey",
+      "date": "2026-06-03",
+      "description": "Retrospective on ViaBTC Group's ten-year evolution and foundational role in establishing CoinEx as a global cryptocurrency trading platform."
+    },
+    {
+      "title": "CoinEx Completes May 2026 CET Repurchase Burn",
+      "url": "https://www.coinex.com/blog/14764-coinex-completes-may-2026-cet-repurchase-burn",
+      "date": "2026-06-03",
+      "description": "Fifth monthly token management event of 2026, continuing systematic CET buyback and burning for long-term ecosystem sustainability."
+    },
+    {
+      "title": "Automating Market Opportunities: My Experience with CoinEx Futures Grid",
+      "url": "https://www.coinex.com/blog/14746-automating-market-opportunities-my-experience-with-coinex-futures-grid",
+      "date": "2026-06-01",
+      "description": "User experience report on automated trading functionality, addressing the challenge of capturing market movements in the continuously active crypto market."
+    },
+    {
+      "title": "CoinEx Staking in 2026: Maximizing Passive Crypto Returns",
+      "url": "https://www.coinex.com/blog/14729-coinex-staking-in-2026-maximizing-passive-crypto-returns",
+      "date": "2026-05-29",
+      "description": "Comparative analysis of exchange-based staking versus on-chain alternatives, highlighting flexible access, security features, and competitive yield rates."
+    },
+    {
+      "title": "CoinEx Charity Successfully Hosts First Web3 Education Event at UCES University",
+      "url": "https://www.coinex.com/blog/14711-coinex-charity-successfully-hosts-first-web3-education-event-at-uces-university",
+      "date": "2026-05-28",
+      "description": "Educational partnership event in Argentina exploring blockchain fundamentals and digital technology's impact on finance, education, and society."
+    },
+    {
+      "title": "What Can Crypto Investors Do During a Bear Market? Dual Investment in Weak Markets",
+      "url": "https://www.coinex.com/blog/14675-what-can-crypto-investors-do-during-a-bear-market",
+      "date": "2026-05-26",
+      "description": "Strategic guidance for investors experiencing negative sentiment, presenting alternatives to panic-selling or holding idle funds during market weakness."
+    }
+  ]
+}
