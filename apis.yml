@@ -1,6 +1,6 @@
 name: CoinEx
 description: CoinEx is a global cryptocurrency exchange offering REST and WebSocket APIs for spot trading, futures, perpetual contracts, market data, order management, asset operations, and sub-account administration. API v2 launched January 2024 with unified authentication, restructured endpoints, and per-second rate limiting.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/apis.yml
 version: "0.19"
 created: "2026-06-13"
@@ -20,7 +20,7 @@ tags:
 apis:
   - name: CoinEx REST API v2
     description: The primary HTTP REST API for CoinEx, providing access to spot trading, futures, perpetual contracts, account management, asset operations, market data, and referral endpoints. Authentication uses HMAC-SHA256 signed headers.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.coinex.com/api/v2/
     baseURL: https://api.coinex.com/v2
     tags:
@@ -54,7 +54,7 @@ apis:
 
   - name: CoinEx WebSocket API v2 - Spot
     description: Real-time WebSocket API for CoinEx spot markets. Supports streaming subscriptions for market depth, trade feeds, K-line data, and account/order updates. Responses use zip compression.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.coinex.com/api/v2/
     baseURL: wss://socket.coinex.com/v2/spot
     tags:
@@ -76,7 +76,7 @@ apis:
 
   - name: CoinEx WebSocket API v2 - Futures
     description: Real-time WebSocket API for CoinEx futures and perpetual contract markets. Supports streaming subscriptions for market depth, funding rates, position updates, and order events. Responses use zip compression.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.coinex.com/api/v2/
     baseURL: wss://socket.coinex.com/v2/futures
     tags:
