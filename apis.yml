@@ -38,7 +38,7 @@ apis:
         url: https://docs.coinex.com/api/v2/authorization
       - type: RateLimits
         url: https://docs.coinex.com/api/v2/rate-limit
-      - type: Changelog
+      - type: ChangeLog
         url: https://docs.coinex.com/api/v2/changelog
       - type: IntegrationGuide
         url: https://docs.coinex.com/api/v2/guide
@@ -98,7 +98,7 @@ apis:
         url: https://support.coinex.com/
 
 common:
-  - type: Developer Console
+  - type: Console
     url: https://www.coinex.com/en/apikey
   - type: Documentation
     url: https://docs.coinex.com/api/v2/
@@ -106,7 +106,7 @@ common:
     url: https://docs.coinex.com/api/v2/authorization
   - type: RateLimits
     url: https://docs.coinex.com/api/v2/rate-limit
-  - type: Changelog
+  - type: ChangeLog
     url: https://docs.coinex.com/api/v2/changelog
   - type: Fees
     url: https://www.coinex.com/en/fees
