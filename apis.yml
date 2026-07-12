@@ -98,6 +98,10 @@ apis:
         url: https://support.coinex.com/
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/coinex-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/coinex-domain-security.yml
   - type: Console
     url: https://www.coinex.com/en/apikey
   - type: Documentation

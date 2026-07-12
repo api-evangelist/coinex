@@ -1,0 +1,30 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: docs.coinex.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 18 13:02:24 2026 GMT
+  hsts: false
+- host: api.coinex.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 20 23:59:59 2027 GMT
+  hsts: null
+- host: socket.coinex.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 13 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: coinex.com
+  dnssec: false
+  caa:
+  - 0 issue "pki.goog"
+  - 0 issue "amazon.com"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
