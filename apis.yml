@@ -1,5 +1,16 @@
 name: CoinEx
 description: CoinEx is a global cryptocurrency exchange offering REST and WebSocket APIs for spot trading, futures, perpetual contracts, market data, order management, asset operations, and sub-account administration. API v2 launched January 2024 with unified authentication, restructured endpoints, and per-second rate limiting.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
