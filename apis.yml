@@ -121,6 +121,8 @@ apis:
         url: https://support.coinex.com/
 
 common:
+  - type: Website
+    url: https://www.coinex.com/
   - type: VulnerabilityDisclosure
     url: security/coinex-vulnerability-disclosure.yml
   - type: DomainSecurity
