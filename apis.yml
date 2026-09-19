@@ -53,6 +53,14 @@ apis:
       - Market Data
       - Account Management
       - Asset Management
+      - Referrals
+    tags_raw:
+      - REST
+      - Spot Trading
+      - Futures
+      - Market Data
+      - Account Management
+      - Asset Management
       - Referral
     properties:
       - type: Documentation
