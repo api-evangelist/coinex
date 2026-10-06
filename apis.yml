@@ -27,7 +27,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coinex.png
 url: https://raw.githubusercontent.com/api-evangelist/coinex/refs/heads/main/apis.yml
 version: "0.19"
 created: "2026-06-13"
-modified: "2026-06-13"
+modified: '2026-10-06'
 specificationVersion: '0.23'
 
 tags:
@@ -129,6 +129,8 @@ apis:
         url: https://support.coinex.com/
 
 common:
+  - url: https://www.coinex.com/blog/
+    type: Blog
   - type: Website
     url: https://www.coinex.com/
   - type: VulnerabilityDisclosure
