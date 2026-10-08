@@ -48,3 +48,21 @@ notes:
   - API trading volume counts toward VIP level calculation (market makers excepted)
   - The more favorable rate between VIP Discount and Market Maker Discount is applied
   - CET token can be activated as fee payment method across all trading pairs
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Standard
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: VIP (Tiered)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
