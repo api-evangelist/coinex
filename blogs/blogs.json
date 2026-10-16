@@ -1,7 +1,7 @@
 {
   "provider": "coinex",
   "url": "https://www.coinex.com/en/blog",
-  "fetched": "2026-06-13",
+  "fetched": "2026-10-10T13:15:00Z",
   "posts": [
     {
       "title": "Game Starts! 2026 World Cup Frenzy: ALL IN THE GLORY",
@@ -63,5 +63,16 @@
       "date": "2026-05-26",
       "description": "Strategic guidance for investors experiencing negative sentiment, presenting alternatives to panic-selling or holding idle funds during market weakness."
     }
-  ]
+  ],
+  "repo": "coinex",
+  "feeds": [
+    {
+      "source": "https://www.coinex.com/blog/",
+      "feed_url": "https://www.coinex.com/blog/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0
 }
