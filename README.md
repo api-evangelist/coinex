@@ -64,57 +64,108 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CoinEx is a global cryptocurrency exchange offering REST and WebSocket APIs for spot trading, futures, perpetual contracts, market data, order management, asset operations, and sub-account administration.
+CoinEx is a global cryptocurrency exchange offering REST and WebSocket APIs for spot trading, futures, perpetual contracts, market data, order management, asset operations, and sub-account administration. API v2 launched January 2024 with unified authentication, restructured endpoints, and per-second rate limiting.
 
-**API Version**: v2 (launched January 2024; v1 discontinued September 2024)
+**Areas:** Cryptocurrency · Exchange · Spot Trading · Futures · Perpetual Contracts · Market Data · WebSocket · Finance
 
-**Base URL**: `https://api.coinex.com/v2`
+## CoinEx on APIs.io
 
-**WebSocket - Spot**: `wss://socket.coinex.com/v2/spot`
+Everything profiled for CoinEx is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coinex/](https://apis.io/providers/coinex/)** — or go straight to one of the APIs or properties below.
 
-**WebSocket - Futures**: `wss://socket.coinex.com/v2/futures`
+### APIs (3)
 
-## API Modules
+- [CoinEx REST API v2](https://apis.io/apis/coinex/coinex-rest-api-v2/) — The primary HTTP REST API for CoinEx, providing access to spot trading, futures, perpetual contracts, account management, asset operations, market data, and…
+- [CoinEx WebSocket API v2 - Spot](https://apis.io/apis/coinex/coinex-websocket-api-v2-spot/) — Real-time WebSocket API for CoinEx spot markets. Supports streaming subscriptions for market depth, trade feeds, K-line data, and account/order updates.…
+- [CoinEx WebSocket API v2 - Futures](https://apis.io/apis/coinex/coinex-websocket-api-v2-futures/) — Real-time WebSocket API for CoinEx futures and perpetual contract markets. Supports streaming subscriptions for market depth, funding rates, position…
 
-- **Account** — Sub-account administration, API key management, trading fee inquiries
-- **Asset** — Balance retrieval, margin borrowing/repayment, deposits/withdrawals, cross-account transfers
-- **Spot** — Market data (depth, trades, K-line), order placement, modification, cancellation
-- **Futures** — Perpetual contract market data, funding rates, position management, TP/SL orders
-- **Referral** — Referee tracking, rebate records
+### Published properties
 
-## Authentication
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-HMAC-SHA256 signature. Required headers for authenticated requests:
-- `X-COINEX-KEY` — your access_id
-- `X-COINEX-SIGN` — HMAC-SHA256(method + path + body + timestamp, secret_key) as lowercase hex
-- `X-COINEX-TIMESTAMP` — current timestamp in milliseconds
+#### Security (2)
 
-Public market data endpoints require no authentication.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Rate Limits
+- [Coinex Domain Security](https://apis.io/security/coinex/coinex-domain-security/)
+- [Coinex Vulnerability Disclosure](https://apis.io/security/coinex/coinex-vulnerability-disclosure/)
 
-- **IP limit**: 400 requests/second (all users on same IP)
-- **Spot orders**: 30 req/s (place), 60 req/s (cancel), 50 req/s (query)
-- **Futures orders**: 20 req/s (place), 40 req/s (cancel), 50 req/s (query)
-- Long-cycle limits (1H/4H/8H/24H) trigger low-speed mode when exceeded
+#### Plans and pricing (1)
 
-## Pricing
+Published plans, tiers and prices.
 
-API access is free. Trading fees based on VIP tier:
-- Base spot fees: 0.20% maker / 0.20% taker
-- Top VIP spot fees: 0.012% maker / 0.024% taker
-- Base futures fees: 0.03% maker / 0.05% taker
-- CET token: pay fees in CET for up to 25% discount
+- [Plans](https://apis.io/plans/coinex/plans/)
 
-## Links
+#### Rate limits (1)
 
-- [API Documentation](https://docs.coinex.com/api/v2/)
-- [Developer Console](https://www.coinex.com/en/apikey)
-- [Authentication Guide](https://docs.coinex.com/api/v2/authorization)
-- [Rate Limits](https://docs.coinex.com/api/v2/rate-limit)
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/coinex/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/coinex/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.coinex.com/)
+- [Documentation](https://docs.coinex.com/api/v2/)
 - [Changelog](https://docs.coinex.com/api/v2/changelog)
-- [Fees](https://www.coinex.com/en/fees)
-- [GitHub Organization](https://github.com/coinexcom)
-- [Python SDK (ccxt)](https://github.com/ccxt/coinex-python)
-- [.NET SDK](https://www.nuget.org/packages/CoinEx.Net)
-- [Help Center](https://support.coinex.com/)
+- [Blog](https://www.coinex.com/blog/)
+- [Terms of service](https://www.coinex.com/en/service)
+
+## API Evangelist rating
+
+**Kin Score 21.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 15.8 |
+
+**Agent readiness 5.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.9** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/coinex/](https://apis.io/providers/coinex/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CoinEx: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coinex/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
